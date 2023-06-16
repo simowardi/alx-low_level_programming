@@ -3,10 +3,9 @@
 #include <stdio.h>
 
 /**
- * main - Entery point generate a random number and
- * print if positie or negative 
- *
- * Return: Always 0 (Success)
+* main - Entery point random number and print if positie or negative
+*
+* Return: Always 0 (Success)
 */
 int main(void)
 {
