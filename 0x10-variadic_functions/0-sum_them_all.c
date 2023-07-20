@@ -9,9 +9,16 @@
 
 int sum_them_all(const unsigned int n, ...);
 {
-	int sum;
-	sum = sum_them_all(n);
-	printf("%d/n" , sum);
+	unsigned int num
+	int sum = 0;
+	va_list list;
 
-	return(0)
+	va_start(list, n);
+
+	for (num = 0; num < n; num++)
+		sum += va_arg(list, sum);
+
+	va_end(list);
+
+	return (sum);
 }
