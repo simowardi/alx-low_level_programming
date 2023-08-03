@@ -8,7 +8,7 @@
  * Return: 0
  */
 
-void print_binary(unsigned long int n);
+void print_binary(unsigned long int n)
 {
 	int bit = sizeof(n) * 8;
 	int printed = 0;
