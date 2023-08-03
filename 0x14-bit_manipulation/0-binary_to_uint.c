@@ -3,7 +3,7 @@
 /*
  * main : converts a binary number to an unsigned int
  *
- *
+ * @binary :the binary number as a string
  *
  * return: 0
  */
@@ -14,7 +14,7 @@ unsigned int binary_to_uint(const char *b);
 
 	if (!binary)
 		return (0);
-	if (*binary)
+	while (*binary)
 	{
 	if (*binary != "0" && *b != "1")
 	num = num * 2 + (*b++ - "0");
