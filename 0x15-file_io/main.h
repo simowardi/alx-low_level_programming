@@ -1,9 +1,9 @@
 #ifndef MAIN_H
 #define MAIN_H
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
 #include <fcntl.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 #define READ_BUFF_SIZE 1024
 
