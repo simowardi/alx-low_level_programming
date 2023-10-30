@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- *create_array - create an array of chars and fill it
+ * create_array - create an array of chars and fill it
  *@size: memory size of arr
- *@c:
+ *@c: the charcter of the array
  *Returns:pointer to array, NULL if size = 0
  *
  */
@@ -14,7 +14,7 @@ char *create_array(unsigned int size, char c)
 
 	arr = malloc(sizeof(char) * size);
 	if (size == 0 || arr == NULL)
-		return NULL;
+		return (NULL);
 	i = 0;
 
 	while (i < size)
