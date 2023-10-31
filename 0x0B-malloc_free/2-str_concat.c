@@ -10,36 +10,28 @@
  *Return: Pointer to the concatenated string, or NULL if s1 or s2 is NULL or
  * memory allocation fails
  */
-char *str_concat(char *s1, char *s2)
-{
-	char *concat;
-	int length1 = 0, length2 = 0, i, j;
+char *str_concat(char *s1, char *s2) {
+	if (s1 == NULL && s2 == NULL) {
+		return NULL;
+	}
 
-	/* Check if s1 and s2 are NULL */
-	if (s1 == NULL || s2 == NULL)
-		return (NULL);
+	int length1 = (s1 != NULL) ? strlen(s1) : 0;
+	int length2 = (s2 != NULL) ? strlen(s2) : 0;
 
-	/* Calculate the lengths of s1 and s2 */
-	while (s1[length1] != '\0')
-		length1++;
-	while (s2[length2] != '\0')
-		length2++;
+	char *concat = malloc(sizeof(char) * (length1 + length2 + 1));
+	if (concat == NULL) {
+		return NULL;
+	}
 
-	/* Allocate memory for the concatenated string */
-	concat = malloc(sizeof(char) * (length1 + length2 + 1));
-	if (concat == NULL)
-		return (NULL);
-
-	/* Copy s1 to concat */
-	for (i = 0; i < length1; i++)
+	int i, j;
+	for (i = 0; i < length1; i++) {
 		concat[i] = s1[i];
+	}
 
-	/* Copy s2 to concat */
-	for (j = 0; j < length2; j++, i++)
-		concat[i] = s2[j];
+	for (j = 0; j < length2; j++) {
+		concat[i++] = s2[j];
+	}
 
-	/* Add null terminator at the end */
 	concat[i] = '\0';
-
-	return (concat);
+	return concat;
 }
