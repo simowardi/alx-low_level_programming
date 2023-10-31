@@ -1,16 +1,14 @@
 #include "main.h"
 
-/*
- * _strdup - duplicate a string
- * @str: the string to be duplicated
+/**
+ * _strdup - duplicate a string of char
  *
- * Description: This function takes a string as input and creates a duplicate
- * of that string, allocating memory dynamically to store the duplicate.
- * The duplicated string is then returned.
+ *@str: the string to be duplicated
+ *Description: Duplicates a string
  *
- * Return: Pointer to the duplicated string, or NULL if str is NULL or memory
- * allocation fails
+ *Return: Pointer to the duplicated string, or NULL if str is NULL
  */
+
 char *_strdup(char *str)
 {
 	char *dup; /* Pointer to store the duplicated string */
