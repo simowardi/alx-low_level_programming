@@ -25,7 +25,7 @@ int recursive_binary_search(int *array, size_t size, int value)
 
 	for (j = 0; j < size; j++)
 	{
-		printf("%s %d", (i == 0) ? ":" : ",", array[j]);
+		printf("%s %d", (j == 0) ? ":" : ",", array[j]);
 	}
 
 	printf("\n");
