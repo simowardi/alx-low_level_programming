@@ -13,8 +13,6 @@
   *
   * Description: Prints the [sub]array being searched after each change.
 ***/
-
-
 int recursive_binary_search(int *array, size_t size, int value)
 {
 	size_t mid = size / 2;
@@ -27,14 +25,7 @@ int recursive_binary_search(int *array, size_t size, int value)
 
 	for (j = 0; j < size; j++)
 	{
-		if (j == 0)
-		{
-			printf("%d", array[j]);
-		}
-		else
-		{
-			printf(", %d", array[j]);
-		}
+		printf("%s %d", (i == 0) ? ":" : ",", array[j]);
 	}
 
 	printf("\n");
@@ -71,8 +62,6 @@ int recursive_binary_search(int *array, size_t size, int value)
  *
  * Description: Prints the [sub]array being searched after each change.
 **/
-
-
 int binary_search(int *array, size_t size, int value)
 {
 	int value_index;
