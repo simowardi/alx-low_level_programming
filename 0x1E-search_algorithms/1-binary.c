@@ -26,28 +26,35 @@ int recursive_binary_search(int *array, size_t size, int value)
 	printf("Searching in array");
 
 	for (j = 0; j < size; j++)
+	{
 		if (j == 0)
+		{
 			printf("%d", array[j]);
+		}
 		else
+		{
 			printf(", %d", array[j]);
+		}
+	}
 
 	printf("\n");
 
 	if (mid && size % 2 == 0)
 		mid--;
 
+	/* return the mid value index */
 	if (value == array[mid])
-		int value_index = mid;
-
-		return (value_index);
+	{
+		return ((int)mid);
+	}
+	/* return the left_result */
 	if (value < array[mid])
-		int left_res = recursive_binary_search(array, mid, value);
-
-		return (left_res);
+	{
+		return (recursive_binary_search(array, mid, value));
+	}
 	mid++;
-	int right_res = recursive_binary_search(array + mid, size - mid, value) + mid;
-
-	return (right_res);
+	/* return the right result */
+	return (recursive_binary_search(array + mid, size - mid, value) + mid);
 }
 
 
