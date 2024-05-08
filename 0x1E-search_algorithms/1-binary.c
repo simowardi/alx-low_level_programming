@@ -21,7 +21,7 @@ int recursive_binary_search(int *array, size_t size, int value)
 	if (array == NULL || size == 0)
 		return (-1);
 
-	printf("Searching in array:");
+	printf("Searching in array");
 
 	for (j = 0; j < size; j++)
 	{
